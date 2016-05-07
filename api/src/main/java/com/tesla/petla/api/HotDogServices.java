@@ -1,5 +1,7 @@
 package com.tesla.petla.api;
 
+import com.tesla.petla.api.type.HotDogPetWatcher;
+
 public class HotDogServices {
 
 	private static HotDogServices instance = null;
@@ -24,6 +26,8 @@ public class HotDogServices {
 		// Use Auth token hardcoded above
 		
 		// call petwatcher
+		HotDogPetWatcher instance = HotDogPetWatcher.getInstance();
+    	instance.startPetWatcher();
 		
 		// set 'petModeEnabled' to 'true' if the logic was successful 
 		

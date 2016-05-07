@@ -26,6 +26,8 @@ private static HotDogPetWatcher instance = null;
 			
 		}
 		
+		System.out.println("Pet watcher switched off.");
+		
 	}
 	
 }

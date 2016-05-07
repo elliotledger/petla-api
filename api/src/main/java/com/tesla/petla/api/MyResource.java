@@ -20,6 +20,10 @@ public class MyResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
+    	
+    	HotDogServices instance = HotDogServices.getInstance();
+    	instance.enablePetMode();
+    	
         return "Got it!";
     }
 }

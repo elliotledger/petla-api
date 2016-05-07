@@ -17,6 +17,7 @@ private static HotDogPetWatcher instance = null;
 	}
 	
 	private boolean watcherOn = true;
+	private String teslaAuthToken = "thisIsAnAuthToken12324";
 	
 	public void startPetWatcher(){
 		
@@ -28,6 +29,21 @@ private static HotDogPetWatcher instance = null;
 		
 		System.out.println("Pet watcher switched off.");
 		
+	}
+	
+	public boolean stopPetWatcher(){
+		
+		if(watcherOn == true){
+			this.watcherOn = false;
+		}
+		
+		return true;
+	}
+
+	// Getters and Setters
+	
+	public void setTeslaAuthToken(String teslaAuthToken) {
+		this.teslaAuthToken = teslaAuthToken;
 	}
 	
 }

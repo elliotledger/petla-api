@@ -23,7 +23,7 @@ public class HotDogServices {
 	
 	public boolean enablePetMode (){
 		
-		// Use Auth token hardcoded above
+		// Use Auth token hardcoded above or do we need to auth via API?
 		
 		// call petwatcher
 		HotDogPetWatcher instance = HotDogPetWatcher.getInstance();

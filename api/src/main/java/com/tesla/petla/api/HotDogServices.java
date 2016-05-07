@@ -2,7 +2,6 @@ package com.tesla.petla.api;
 
 public class HotDogServices {
 
-	
 	private static HotDogServices instance = null;
 	
 	protected HotDogServices() {
@@ -24,9 +23,7 @@ public class HotDogServices {
 		
 		// Use Auth token hardcoded above
 		
-		// do the logic here
-		
-		// ?? create a singleton instance of handler and let it run ??
+		// call petwatcher
 		
 		// set 'petModeEnabled' to 'true' if the logic was successful 
 		

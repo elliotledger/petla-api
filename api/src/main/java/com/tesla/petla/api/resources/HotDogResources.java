@@ -1,5 +1,6 @@
 package com.tesla.petla.api.resources;
 
+import com.tesla.petla.api.HotDogServices;
 import com.tesla.petla.api.type.Status;
 import com.tesla.petla.api.HotDogServices;
 
@@ -16,7 +17,10 @@ public class HotDogResources {
 	@GET
 	@Path("/enable")
 	public boolean enable() {
-		return true;
+		
+		HotDogServices instance = HotDogServices.getInstance();
+    	return instance.enablePetMode();
+		
 	}
 	
 	@GET

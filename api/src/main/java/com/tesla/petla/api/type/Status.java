@@ -1,5 +1,8 @@
 package com.tesla.petla.api.type;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Status {
 	private boolean petModeIsEnabled;
 	private String outsideTemp;

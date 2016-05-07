@@ -22,16 +22,19 @@ public class HotDogServices {
 	private boolean petModeEnabled = false;
 	
 	public boolean enablePetMode (){
-		
+		boolean status = false;
 		// Use Auth token hardcoded above or do we need to auth via API?
 		
 		// call petwatcher
 		HotDogPetWatcher instance = HotDogPetWatcher.getInstance();
     	instance.startPetWatcher();
+		 
+    	if (instance.getWatcherStatus() == true)
+    	{
+    		status = true;
+    	}
 		
-		// set 'petModeEnabled' to 'true' if the logic was successful 
-		
-		return false;
+		return status;
 	}
 	
 	// method to return the status

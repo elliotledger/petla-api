@@ -58,12 +58,11 @@ public class HotDogServices {
 
 		System.out.println("status: " + response.getStatus());
 		System.out.println("headers: " + response.getHeaders());
-		System.out.println("body: " + response.readEntity(String.class));
-//		final JSONObject r1 = new JSONObject(response.readEntity(String.class));
-//		System.out.println(r1);
-//		final JSONObject r2 = r1.getJSONObject("response");
-//		System.out.println(r2.getString("inside_temp"));
-		Status s = new Status(true, "19", "23", false, true);
+		final JSONObject r1 = new JSONObject(response.readEntity(String.class));
+		final JSONObject r2 = r1.getJSONObject("response");
+		System.out.println(r2);
+		Integer.toString(r2.getInt("outside_temp"));
+		Status s = new Status(true, Integer.toString(r2.getInt("outside_temp")), Integer.toString(r2.getInt("inside_temp")), r2.getBoolean("is_auto_conditioning_on"), true);
 		return s;
 	}
 	
